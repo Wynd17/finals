@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600&display=swap%27%29%3B");
+
+*{/*universal*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+html{
+    font-size : 62.5%;
+}
+
+body{
+    width: 100%;
+    height:100%;
+    background-color:#4F7942;
+    color:rgb(255, 255, 255);
+    overflow-x: hidden;
+
+}
+
+header{
+    margin-top: 25px;
+    position: fixed;
+    top: 0;
+    left: 10;
+    width:100%;
+    padding: 1rem 9%;/* para sa font*/
+    background-color: transparent;
+    filter: drop-shadow(10px);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{/* Jims logo */
+    font-size: 3rem;
+    color: yellowgreen;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.5 ease; 
+    font-size: 8rem; 
+}
+.logo:hover{
+    transform: scale(1.1);
+}
+
+nav a{
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 4rem; 
+    font-weight: 500;
+    transition: 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover
+nav a:active{
+    color:#5F8575;
+    border-bottom:3px solid #8A9A5B;
+}
+
+@media(max-width:995px){
+    nav{
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        width: 40%;
+        border-left: 3px solid #C1E1C1;
+        border-bottom: 3px solid #C1E1C1;
+        border-bottom-right-radius: 2rem;
+        padding: 1rem solid;
+        background-color: #5F8575;
+        border-top: 0.1em solid rgba(0,0,0,0,1) ;
+    }
+    nav.active{
+        display: block;
+    }
+
+    nav a{
+        display: block;
+        font-size:2rem;
+        margin: 3rem;
+    }
+    nav a:hover,
+        nav a:active{
+            padding: 1rem;
+            border-radius: 0.5rem; 
+            border-bottom: 0.5rem solid #ff5733;          
+        }
+}
+
+
+section{
+   min-height: 100vh;
+   padding: 5rem 9% 5rem;
+
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color:rgb(14, 13, 13); 
+}
+
+.home,.home-content h1{
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.3;
+    cursor: pointer;
+}
+span{
+    color: tomato;
+}
+.home-content h3{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+.home-img{
+    border-radius: 50%;
+    background-color: transparent;
+}
+.home-img img{
+    position: relative;
+    width: 70vh;
+    border-radius: 8%;
+    box-shadow: 0 0 25px solid rgb(14, 13, 13);
+    cursor: pointer;
+    transition: 0.2s linear;
+}
+
+@keyframes fadeIn{ /* animation sa who am i */
+    from {
+        opacity: 0
+    }
+    to {
+        opacity 1
+    }
+ }
+ .show {
+    display: inline;
+    animation: fadeIn 1s ease-in-out;
+ }
